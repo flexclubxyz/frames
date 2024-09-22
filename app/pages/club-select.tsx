@@ -56,7 +56,7 @@ app.frame("/", (c) => {
         </div>
       ),
       intents: [
-        <Button.Reset>Back to Club Selection</Button.Reset>,
+        <Button.Reset>Back</Button.Reset>,
         <Button.Link href="https://app.flexclub.xyz/0xFlex001">
           Deposit USDC
         </Button.Link>,
@@ -103,7 +103,7 @@ app.frame("/", (c) => {
         </div>
       ),
       intents: [
-        <Button.Reset>Back to Club Selection</Button.Reset>,
+        <Button.Reset>Back</Button.Reset>,
         <Button.Link href="https://app.flexclub.xyz/0xFlex002">
           Deposit USDC
         </Button.Link>,
