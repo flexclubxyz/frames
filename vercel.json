@@ -3,13 +3,7 @@
   "builds": [
     {
       "src": "src/index.tsx",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/api"
+      "use": "@vercel/next"
     }
   ]
 }
