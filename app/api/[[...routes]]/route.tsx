@@ -2,7 +2,10 @@
 import { Button, Frog } from "frog";
 import { handle } from "frog/next";
 import { devtools } from "frog/dev";
+import { parseUnits } from "ethers";
 import { serveStatic } from "frog/serve-static";
+import { contractABI001 } from "../../utils/flexclub001abi";
+import { contractABI002 } from "../../utils/flexclub002abi";
 
 // Initialize Frog App
 const app = new Frog({
@@ -57,9 +60,9 @@ app.frame("/", (c) => {
       ),
       intents: [
         <Button.Reset>Back </Button.Reset>,
-        <Button.Link href="https://app.flexclub.xyz/0xFlex001">
+        <Button.Transaction target="/deposit-club1">
           Deposit USDC
-        </Button.Link>,
+        </Button.Transaction>,
       ],
     });
   }
@@ -104,9 +107,9 @@ app.frame("/", (c) => {
       ),
       intents: [
         <Button.Reset>Back</Button.Reset>,
-        <Button.Link href="https://app.flexclub.xyz/0xFlex002">
+        <Button.Transaction target="/deposit-club2">
           Deposit USDC
-        </Button.Link>,
+        </Button.Transaction>,
       ],
     });
   }
@@ -217,6 +220,30 @@ app.frame("/select-club", (c) => {
       <Button value="flexclub001">Flexclub 1: Devcon Bangkok Trip</Button>,
       <Button value="flexclub002">Flexclub 2: Farcon 2025</Button>,
     ],
+  });
+});
+
+// Transaction Routes
+
+// For Flexclub 1
+app.transaction("/deposit-club1", (c) => {
+  return c.contract({
+    abi: contractABI001,
+    chainId: "eip155:8453", // Base L2 chainId
+    functionName: "deposit",
+    args: [parseUnits("1", 6)], // Deposit 5 USDC (6 decimals)
+    to: "0x63Be961F1A2985a4596a39DB6DCcfEBee0Feae88",
+  });
+});
+
+// For Flexclub 2
+app.transaction("/deposit-club2", (c) => {
+  return c.contract({
+    abi: contractABI002,
+    chainId: "eip155:8453", // Base L2 chainId
+    functionName: "deposit",
+    args: [parseUnits("1", 6)], // Deposit 5 USDC (6 decimals)
+    to: "0xcE51BE974FBE7e642072cAdb87F3F63b80cD7c8E",
   });
 });
 
