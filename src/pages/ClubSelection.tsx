@@ -41,7 +41,12 @@ export const ClubSelection = (c) => {
           <p style={{ color: "white", fontSize: 28 }}>APY: 4.41% 📈</p>
         </div>
       ),
-      intents: [<Button.Reset>Back to Club Selection</Button.Reset>],
+      intents: [
+        <Button.Reset>Back to Club Selection</Button.Reset>,
+        <Button.Link href="https://app.flexclub.xyz/0xFlex001">
+          Deposit USDC
+        </Button.Link>,
+      ],
     });
   }
 
@@ -83,7 +88,12 @@ export const ClubSelection = (c) => {
           <p style={{ color: "white", fontSize: 28 }}>APY: 4.41% 📈</p>
         </div>
       ),
-      intents: [<Button.Reset>Back to Club Selection</Button.Reset>],
+      intents: [
+        <Button.Reset>Back to Club Selection</Button.Reset>,
+        <Button.Link href="https://app.flexclub.xyz/0xFlex002">
+          Deposit USDC
+        </Button.Link>,
+      ],
     });
   }
 
