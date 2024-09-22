@@ -1,7 +1,7 @@
 import { Button } from "frog";
 
-export const Welcome = (c) => {
-  const { buttonValue, status } = c;
+export const Welcome = (c: any) => {
+  const { buttonValue } = c;
 
   // Club 001 info
   if (buttonValue === "flexclub001") {

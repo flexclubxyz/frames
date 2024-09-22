@@ -1,14 +1,18 @@
 {
-  "name": "flexcub-frames",
+  "name": "flexclub-frames",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "frog dev"
+    "dev": "frog dev",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "deploy": "vercel"
   },
   "dependencies": {
     "@hono/node-server": "latest",
     "frog": "latest",
-    "hono": "^4"
+    "hono": "^4",
+    "vercel": "latest"
   },
   "devDependencies": {
     "typescript": "latest"

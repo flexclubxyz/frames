@@ -1,6 +1,6 @@
 import { Button } from "frog";
 
-export const ClubSelection = (c) => {
+export const ClubSelection = (c: any) => {
   const { buttonValue } = c;
 
   // Flexclub 001: Devcon Bangkok Trip Info
