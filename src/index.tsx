@@ -1,8 +1,8 @@
 import { serveStatic } from "@hono/node-server/serve-static";
 import { Frog } from "frog";
 import { devtools } from "frog/dev";
-import { Welcome } from "./pages/Welcome";
-import { ClubSelection } from "./pages/ClubSelection";
+import { Welcome } from "./pages/Welcome.js";
+import { ClubSelection } from "./pages/ClubSelection.js";
 
 export const app = new Frog({
   title: "FlexClub Frame",

@@ -2,26 +2,15 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Module resolution */
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-
-    /* Emit compiled files */
+    "moduleResolution": "node",
     "outDir": "./dist",
     "noEmit": false,
-
-    /* JSX settings */
     "jsx": "react-jsx",
     "jsxImportSource": "frog/jsx",
-
-    /* Linting */
+    "skipLibCheck": true,
     "strict": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noUnusedParameters": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules"]
