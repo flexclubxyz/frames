@@ -1,25 +1,20 @@
 {
-  "name": "flexclub-frames",
-  "private": true,
-  "type": "module",
   "scripts": {
-    "dev": "frog dev",
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "deploy": "vercel"
+    "dev": "next dev",
+    "build": "next build",
+    "deploy": "vercel",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@hono/node-server": "latest",
-    "@types/node": "^22.5.5",
-    "frog": "^0.17.2",
-    "hono": "^4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "frog": "latest",
+    "hono": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
     "vercel": "latest"
   },
   "devDependencies": {
-    "@types/react": "^18.3.8",
-    "@types/react-dom": "^18.3.0",
-    "typescript": "^5.6.2"
+    "@types/react": "18.3.8"
   }
 }
