@@ -13,11 +13,11 @@ const app = new Frog({
 // Serve static files
 app.use("/*", serveStatic({ root: "./public" }));
 
-// Define the Welcome Frame for the /api route
+// Define Frames for Flexclub Info
 app.frame("/", (c) => {
   const { buttonValue } = c;
 
-  // Flexclub 001 info
+  // Flexclub 001: Devcon Bangkok Trip Info
   if (buttonValue === "flexclub001") {
     return c.res({
       image: (
@@ -55,11 +55,16 @@ app.frame("/", (c) => {
           <p style={{ color: "white", fontSize: 28 }}>APY: 4.41% 📈</p>
         </div>
       ),
-      intents: [<Button.Reset>Back to Club Selection</Button.Reset>],
+      intents: [
+        <Button.Reset>Back to Club Selection</Button.Reset>,
+        <Button.Link href="https://app.flexclub.xyz/0xFlex001">
+          Deposit USDC
+        </Button.Link>,
+      ],
     });
   }
 
-  // Flexclub 002 info
+  // Flexclub 002: Farcon 2025 Info
   if (buttonValue === "flexclub002") {
     return c.res({
       image: (
@@ -97,45 +102,16 @@ app.frame("/", (c) => {
           <p style={{ color: "white", fontSize: 28 }}>APY: 4.41% 📈</p>
         </div>
       ),
-      intents: [<Button.Reset>Back to Club Selection</Button.Reset>],
-    });
-  }
-
-  // Club Selection Screen
-  if (buttonValue === "proceed") {
-    return c.res({
-      image: (
-        <div
-          style={{
-            alignItems: "center",
-            background: "linear-gradient(to right, #432889, #17101F)",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            height: "100%",
-            width: "100%",
-            textAlign: "center",
-          }}
-        >
-          <div
-            style={{
-              color: "white",
-              fontSize: 40,
-              marginBottom: 20,
-            }}
-          >
-            Select a club to join
-          </div>
-        </div>
-      ),
       intents: [
-        <Button value="flexclub001">Flexclub 1: Devcon Bangkok</Button>,
-        <Button value="flexclub002">Flexclub 2: Farcon 2025</Button>,
+        <Button.Reset>Back to Club Selection</Button.Reset>,
+        <Button.Link href="https://app.flexclub.xyz/0xFlex002">
+          Deposit USDC
+        </Button.Link>,
       ],
     });
   }
 
-  // Default Welcome Screen (for /api route)
+  // Club Selection Screen
   return c.res({
     image: (
       <div
@@ -153,16 +129,18 @@ app.frame("/", (c) => {
         <div
           style={{
             color: "white",
-            fontSize: 50,
-            lineHeight: 1.4,
-            padding: "0 120px",
+            fontSize: 40,
+            marginBottom: 20,
           }}
         >
-          Welcome to Flexclub
+          Select a Club
         </div>
       </div>
     ),
-    intents: [<Button value="proceed">Get started</Button>],
+    intents: [
+      <Button value="flexclub001">Flexclub 1: Devcon Bangkok Trip</Button>,
+      <Button value="flexclub002">Flexclub 2: Farcon 2025</Button>,
+    ],
   });
 });
 
