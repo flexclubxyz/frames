@@ -9,7 +9,7 @@ export const ClubSelection = (c) => {
       <div
         style={{
           alignItems: "center",
-          background: "black",
+          background: "linear-gradient(to right, #432889, #17101F)",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
