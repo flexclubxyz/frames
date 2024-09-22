@@ -110,7 +110,7 @@ export const Welcome = (c) => {
               marginBottom: 20,
             }}
           >
-            Select a Club
+            Select a club to join
           </div>
         </div>
       ),
