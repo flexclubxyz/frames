@@ -59,10 +59,13 @@ app.frame("/", (c) => {
         </div>
       ),
       intents: [
-        <Button.Reset>Back </Button.Reset>,
-        <Button.Transaction target="/deposit-club1">
+        <Button.Link href="https://app.flexclub.xyz/0xFlex001">
           Deposit USDC
-        </Button.Transaction>,
+        </Button.Link>,
+        <Button.Reset>Back </Button.Reset>,
+        // <Button.Transaction target="/deposit-club1">
+        //   Deposit USDC
+        // </Button.Transaction>,
       ],
     });
   }
@@ -106,10 +109,13 @@ app.frame("/", (c) => {
         </div>
       ),
       intents: [
-        <Button.Reset>Back</Button.Reset>,
-        <Button.Transaction target="/deposit-club2">
+        <Button.Link href="https://app.flexclub.xyz/0xFlex002">
           Deposit USDC
-        </Button.Transaction>,
+        </Button.Link>,
+        <Button.Reset>Back</Button.Reset>,
+        // <Button.Transaction target="/deposit-club2">
+        //   Deposit USDC
+        // </Button.Transaction>,
       ],
     });
   }
@@ -142,8 +148,8 @@ app.frame("/", (c) => {
         </div>
       ),
       intents: [
-        <Button value="flexclub001">Flexclub 1: Devcon Bangkok</Button>,
-        <Button value="flexclub002">Flexclub 2: Farcon 2025</Button>,
+        <Button value="flexclub001">FLEX 1: Devcon Bangkok</Button>,
+        <Button value="flexclub002">FLEX 2: Farcon 2025</Button>,
       ],
     });
   }
