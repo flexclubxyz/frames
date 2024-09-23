@@ -59,10 +59,10 @@ app.frame("/", (c) => {
         </div>
       ),
       intents: [
+        <Button.Reset>Back </Button.Reset>,
         <Button.Link href="https://app.flexclub.xyz/0xFlex001">
           Deposit USDC
         </Button.Link>,
-        <Button.Reset>Back </Button.Reset>,
         // <Button.Transaction target="/deposit-club1">
         //   Deposit USDC
         // </Button.Transaction>,
@@ -109,10 +109,10 @@ app.frame("/", (c) => {
         </div>
       ),
       intents: [
+        <Button.Reset>Back</Button.Reset>,
         <Button.Link href="https://app.flexclub.xyz/0xFlex002">
           Deposit USDC
         </Button.Link>,
-        <Button.Reset>Back</Button.Reset>,
         // <Button.Transaction target="/deposit-club2">
         //   Deposit USDC
         // </Button.Transaction>,
